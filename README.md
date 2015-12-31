@@ -8,6 +8,6 @@ The main purpose of adding this was so I could set the owner of mounted volume.
 ```
 git clone https://github.com/mdusher/docker-mysql
 cd docker-mysql
-docker build -t mdusher/mysql 
+docker build -t mdusher/mysql .
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -v /docker/mysql/data:/var/lib/mysql -e SETUID=1000 -e SETGID=1000 -d mdusher/mysql
 ```
